@@ -1,0 +1,15 @@
+# IDE
+.vscode
+.idea
+
+# Log
+logs
+npm-debug.log
+
+# NodeJS
+node_modules
+package-lock.json
+
+# Dist
+coverage
+run
