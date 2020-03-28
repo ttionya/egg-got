@@ -1,0 +1,68 @@
+{
+  "name": "egg-got",
+  "version": "1.0.0",
+  "author": "ttionya",
+  "license": "MIT",
+  "description": "HTTP request (got) plugin for EggJS",
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "got",
+    "request"
+  ],
+  "eggPlugin": {
+    "name": "got"
+  },
+  "dependencies": {
+    "got": "^10.7.0"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.26.0",
+    "egg-bin": "^4.14.0",
+    "egg-ci": "^1.13.0",
+    "egg-mock": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-egg": "^8.0.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app",
+    "lib",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttionya/egg-got.git"
+  },
+  "homepage": "https://github.com/ttionya/egg-got",
+  "bugs": {
+    "url": "https://github.com/ttionya/egg-got/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix"
+    ]
+  }
+}
