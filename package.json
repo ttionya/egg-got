@@ -1,9 +1,9 @@
 {
   "name": "egg-got",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "ttionya",
   "license": "MIT",
-  "description": "HTTP request (got) plugin for EggJS",
+  "description": "HTTP request library got plugin for EggJS",
   "keywords": [
     "egg",
     "eggPlugin",
@@ -27,7 +27,7 @@
     "eslint": "^6.8.0",
     "eslint-config-egg": "^8.0.0",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.9"
+    "lint-staged": "^10.0.0"
   },
   "engines": {
     "node": ">=8.0.0"
